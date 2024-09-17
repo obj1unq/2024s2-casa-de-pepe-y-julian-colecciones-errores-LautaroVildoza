@@ -24,12 +24,12 @@ Implementar, además de los objetos que representan cada cosa, un objeto que rep
 - `vieneDeComprar(categoria)`: indica si la _última_ cosa que se compró es de la categoría indicada.
 - `esDerrochona()`: indica si el importe total de las cosas compradas es de 9000 pesos o más.
 - `compraMasCara()`: retorna la cosa comprada de mayor valor.
-- `comprados(categoría)`: devuelve un objeto que contiene todas las cosas compradas que de esa categoría. 
+- `comprados(categoria)`: devuelve un objeto que contiene todas las cosas compradas que de esa categoría. 
 - `malaEpoca()`: indica si todas las cosas compradas son comida.
 - `queFaltaComprar(lista)`: recibe una lista de cosas y devuelve las cosas de esa lista que aún no se han comprado. <br>
   **Atención**: es una pregunta. No se pide que se compren. 
 - `faltaComida()`: indica si se han comprado menos de 2 cosas que son comida.
--  categoríasCompradas(): indica todas las categorías para las cuales se ha realizado al menos una compra
+- `categoriasCompradas()`: indica todas las categorías para las cuales se ha realizado al menos una compra
 
 ### Ejemplo
 

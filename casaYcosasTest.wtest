@@ -1,0 +1,41 @@
+import casa.*
+import cosas.*
+import cuentas.*
+
+describe "Test1" {
+  test "Ejemplos" {
+    casaDePepeYJulian.comprar(heladera)
+    casaDePepeYJulian.comprar(cama)
+    casaDePepeYJulian.comprar(plancha)
+    assert.equals([heladera, cama, plancha], casaDePepeYJulian.cosas())
+    assert.equals(3, casaDePepeYJulian.cantidadDeCosasCompradas())
+    assert.equals(true, casaDePepeYJulian.tieneAlgun(electrodomestico))
+    assert.equals(true, casaDePepeYJulian.tieneAlgun(mueble))
+    assert.equals(false, casaDePepeYJulian.tieneAlgun(comida))
+    assert.equals(true, casaDePepeYJulian.vieneDeComprar(electrodomestico))
+    assert.equals(false, casaDePepeYJulian.vieneDeComprar(mueble))
+    assert.equals(true, casaDePepeYJulian.esDerrochona())
+    assert.equals([heladera, plancha], casaDePepeYJulian.comprados(electrodomestico))
+    assert.equals([cama], casaDePepeYJulian.comprados(mueble))
+    assert.equals([], casaDePepeYJulian.comprados(comida))
+    assert.equals(false, casaDePepeYJulian.malaEpoca())
+    assert.equals([tiraDeAsado, paqueteDeFideos], casaDePepeYJulian.queFaltaComprar([tiraDeAsado,plancha,paqueteDeFideos]))
+    assert.equals(true, casaDePepeYJulian.faltaComida())
+    assert.equals(#{electrodomestico, mueble}, casaDePepeYJulian.categoriasCompradas())
+  }
+}
+
+test "Cuentas Bancarias" {
+  cuentaConGastos.costoPorOperacion(20)
+  cuentaConGastos.depositar(1000)
+  assert.equals(980, cuentaConGastos.saldo())
+}
+
+test "Cuenta Combinada" {
+  cuentaConGastos.costoPorOperacion(50)
+  cuentaCorriente.depositar(500)
+  cuentaCombinada.depositar(100)
+  assert.equals(50, cuentaConGastos.saldo())
+  cuentaCombinada.extraer(200)
+
+}
